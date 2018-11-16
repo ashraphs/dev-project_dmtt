@@ -1,0 +1,40 @@
+
+squid:S1488"eImmediately return this expression instead of assigning it to the temporary variable "updateProject".(Š™å¸ýÿÿÿÿ
+Vsquid:S1854"ARemove this useless assignment to local variable "deleteProject".(›Ý¡á
+Gsquid:S1481"2Remove this unused "deleteProject" local variable.(›Ý¡á
+lsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(À Ü‘úÿÿÿÿ
+xsquid:S1488"^Immediately return this expression instead of assigning it to the temporary variable "findId".(ÏÝ°Êúÿÿÿÿ
+_squid:S1854"ERemove this useless assignment to local variable "deleteTaskRequest".(§‹ƒ±øÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍŽÿÛ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+€squid:S1488"fImmediately return this expression instead of assigning it to the temporary variable "uploadListToDB".(®»¤°ýÿÿÿÿ
+~squid:S1488"iImmediately return this expression instead of assigning it to the temporary variable "statusProjectList".(“—Òÿ
+Gsquid:S1481"-Remove this unused "deleteDb" local variable.(ËšâÂøÿÿÿÿ
+gsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ð‰Ë¬
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Å“ûÂ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(í²ôýÿÿÿÿ
+gsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ð‰Ë¬
+squid:S1488"gImmediately return this expression instead of assigning it to the temporary variable "fnResultSetList".(‹ÿúçýÿÿÿÿ
+Gsquid:S1481"2Remove this unused "deleteProject" local variable.(›Ý¡á
+Vsquid:S1854"<Remove this useless assignment to local variable "deleteDb".(ËšâÂøÿÿÿÿ
+gsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ð‰Ë¬
+€squid:S1488"fImmediately return this expression instead of assigning it to the temporary variable "taskSchJobList".(Š•ôÿÿÿÿÿ
+lsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(À Ü‘úÿÿÿÿ
+xsquid:S1488"cImmediately return this expression instead of assigning it to the temporary variable "taskReqList".(ÜØÃæ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ý«Ü¨ùÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(äˆŠþüÿÿÿÿ
+fsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(¼î¤y
+gsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ÂŒæ”
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(„¥ð
+ƒsquid:S1488"iImmediately return this expression instead of assigning it to the temporary variable "updateTaskRequest".(çÖœ¯ûÿÿÿÿ
+€squid:S1488"kImmediately return this expression instead of assigning it to the temporary variable "fnFrNewLocationList".(¢²
+Psquid:S1481"6Remove this unused "deleteTaskRequest" local variable.(§‹ƒ±øÿÿÿÿ
+lsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(À Ü‘úÿÿÿÿ
+gsquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(ÂŒæ”
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ð˜Àµ
+ysquid:S1488"dImmediately return this expression instead of assigning it to the temporary variable "excpFileList".(’Ô’¯
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(…¾øŒúÿÿÿÿ
+Vsquid:S1854"ARemove this useless assignment to local variable "deleteProject".(›Ý¡á

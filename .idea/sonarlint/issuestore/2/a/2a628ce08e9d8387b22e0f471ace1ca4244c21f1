@@ -1,0 +1,97 @@
+
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ïÌ³şÿÿÿÿÿ
+squid:S1192"xDefine a constant instead of duplicating this literal "-------------------------------------------------------" 4 times.(³¼ÅÓ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ß¶úêüÿÿÿÿ
+Tsquid:S1481":Remove this unused "updateTaskRequestById" local variable.(Õ™øŒùÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹úö¦
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(«¯×Î
+csquid:S1854"IRemove this useless assignment to local variable "updateTaskRequestById".(Õ™øŒùÿÿÿÿ
+|squid:S1192"bDefine a constant instead of duplicating this literal "---------------------------------" 4 times.(Êô²ºúÿÿÿÿ
+ysquid:S1450"_Remove the "theStatusProject" field and declare it as a local variable in the relevant methods.(±Ë»Òøÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(­ËÁ¡úÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(Êô²ºúÿÿÿÿ
+psquid:S1192"VDefine a constant instead of duplicating this literal "the project name>>>>>" 3 times.(­ËÁ¡úÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(œ­â¯úÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(œÉ¹Úúÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ª«‡àüÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¤ó½
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(³¼ÅÓ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¾ÚüÄ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(è“´ùÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(²¶Éæ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(³¼ÅÓ
+Lsquid:S1481"2Remove this unused "deleteRowById" local variable.(ÒÓÇïÿÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÄÔ¹
+L
+squid:S106"9Replace this use of System.out or System.err by a logger.(¦ö‘Q
+Dsquid:S1066"/Merge this if statement with the enclosing one.(óœÙ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹úö¦
+Dsquid:S1481"/Remove this unused "updateByid" local variable.(×£®Œ
+[squid:S1854"ARemove this useless assignment to local variable "deleteRowById".(ÒÓÇïÿÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(«¯×Î
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(²¶Éæ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(œ¦““
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ûÉÕùşÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¯ƒ€ñ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(Êô²ºúÿÿÿÿ
+Ssquid:S1854">Remove this useless assignment to local variable "updateByid".(×£®Œ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(œ­â¯úÿÿÿÿ
+L
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñüûH
+Dsquid:S1481"/Remove this unused "deleteById" local variable.(ñèŞé
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(è“´ùÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(Êô²ºúÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(³¼ÅÓ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(äåˆ÷øÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ïÌ³şÿÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¯ƒ€ñ
+Ssquid:S1854">Remove this useless assignment to local variable "deleteById".(ñèŞé
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÄÔ¹
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(³¼ÅÓ
+dsquid:S1192"ODefine a constant instead of duplicating this literal "redirect:/home" 6 times.(¡øâÒ
+dsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ã»Ù
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(Êô²ºúÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ß¶úêüÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÒÊÇƒüÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(œøêşúÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢ŸÆŞ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ñ†ë
+ssquid:S1450"YRemove the "theTaskReq" field and declare it as a local variable in the relevant methods.(Œõ‚ıÿÿÿÿ

@@ -1,0 +1,35 @@
+
+Osquid:S1068"5Remove this unused "theFnOldException" private field.(ÁÇâ¿üÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(¦ì–Šûÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡ª‰òûÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¦Í—±
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù°¸¶
+nsquid:S1192"TDefine a constant instead of duplicating this literal "hibcfg.eMonitor.xml" 3 times.(šÂ²Òüÿÿÿÿ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‘ìó
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÿ•§ãûÿÿÿÿ
+8squid:S1148"#Use a logger to log this exception.(Ç’Çê
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÌ±Ž
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÜÓšÚ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È Ïöüÿÿÿÿ
+Hsquid:S1068"3Remove this unused "fnResultSetList" private field.(ã·ÓÒ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(³É¡Ûøÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(“Í—Ó
+zsquid:S1450"`Remove the "theFnOldException" field and declare it as a local variable in the relevant methods.(ÁÇâ¿üÿÿÿÿ
+Msquid:UselessParenthesesCheck"!Remove these useless parentheses.(ØÎÈÆûÿÿÿÿ
+Msquid:UselessParenthesesCheck"!Remove these useless parentheses.(ØÎÈÆûÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(µÉÅ€
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‘ìó
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÑÜ·¬
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(“Ú¾ë
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þë€î
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(õ¢Ø
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÓ«Ê
+=squid:S1148"#Use a logger to log this exception.(º§†ªùÿÿÿÿ

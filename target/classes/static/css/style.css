@@ -1,0 +1,143 @@
+/* CSS Document */
+
+.background-body {
+    margin: 0 auto;
+    background-image: url(../Resource/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    position: absolute;
+    width: 380px;
+    height: 400px;
+    text-align: center;
+    background-color: rgba(52, 73, 94, 0.7);
+    border-radius: 1px;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.container img {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: -30px;
+
+}
+
+.tng_container_logo img {
+    position: absolute;
+    width: 90;
+    height: 70px;
+    float: left;
+    margin-top: -120px;
+    margin-left: 30px;
+}
+
+input {
+    align-content: center;
+    border: none;
+    height: 45px;
+    width: 300px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    /*background-color: rgba(0, 0, 0, 0);*/
+    background-color: aliceblue;
+    padding-left: 40px;
+}
+
+.form-input::before {
+    content: "\f007";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 30px;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 30px;
+}
+
+.form-input:nth-last-child(2)::before {
+    content: "\f023";
+}
+
+/*Button style*/
+.button {
+    border-radius: 4px;
+    background-color: #FEED01;
+    border: #FFFFFF;
+    color: #1F286D;
+    text-align: center;
+    line-height: 5px;
+    font-size: 15px;
+    padding: 20px;
+    height: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+ul {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.divCountCustomer {
+    position: absolute;
+    left: 270px;
+}
+

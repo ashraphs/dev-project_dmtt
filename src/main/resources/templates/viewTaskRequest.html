@@ -1,0 +1,241 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Request-Edit</title>
+
+    <!--BootStrap-->
+    <link th:href="@{//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css}" rel="stylesheet"
+          id="bootstrap-css"></link>
+    <link th:href="@{//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css}" rel="stylesheet"></link>
+    <link rel="stylesheet"
+          th:href="@{https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min}">
+    <link rel="stylesheet"
+          th:href="@{https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css}">
+    <link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css}"
+          rel="stylesheet"
+          type="text/css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link th:href="@{../css/menu-sidebar.css}" rel="stylesheet"></link>
+    <link th:href="@{../css/menu-topbar.css}" rel="stylesheet"></link>
+    <link th:href="@{../css/Home.css}" rel="stylesheet"></link>
+    <link th:href="@{../css/tableStyle.css}" rel="stylesheet"></link>
+    <link th:href="@{../static/css/overwrite_style.css}">
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet" media="screen"/>
+    <link th:href="@{../css/starter-template.css}" rel="stylesheet" media="screen"/>
+    <link th:href="@{../css/datatables.min.css}" rel="stylesheet" media="screen"/>
+
+
+    <script th:src="@{//code.jquery.com/jquery-1.11.1.min.js}"></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js}"></script>
+    <script type="text/javascript" th:src="@{../js/homeTableData.js}"></script>
+    <script type="text/javascript" th:src="@{../js/datatables.min.js}"></script>
+    <script type="text/javascript" th:src="@{../js/fnSetFilteringEnterPress.js}"></script>
+    <script type="text/javascript" th:src="@{../js/homeTable.js}"></script>
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+    <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js}"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" th:src="@{js/admin.js}"></script>
+    <script type="text/javascript" th:src="@{../js/datatables.min.js}"></script>
+    <script type="text/javascript" th:src="@{../js/fnSetFilteringEnterPress.js}"></script>
+    <script type="text/javascript" th:src="@{../js/chg-buttonText.js}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+
+    <!--
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min"/>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet"
+              type="text/css"/>
+        <link href="../static/css/menu-sidebar.css" rel="stylesheet"></link>
+        <link href="../static/css/menu-topbar.css" rel="stylesheet"></link>
+        <link href="../static/css/Home.css" rel="stylesheet"></link>
+        <link href="../static/css/tableStyle.css" rel="stylesheet"></link>
+        <link href="../static/css/overwrite_style.css"></link>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <link href="../css/starter-template.css" rel="stylesheet" media="screen"/>
+        <link href="../css/datatables.min.css" rel="stylesheet" media="screen"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+        <script type="text/javascript" src="../js/homeTableData.js"></script>
+        <script type="text/javascript" src="@{../js/datatables.min.js}"></script>
+        <script type="text/javascript" src="../js/fnSetFilteringEnterPress.js"></script>
+        <script type="text/javascript" src="../js/homeTable.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+                integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/admin.js"></script>
+        <script type="text/javascript" src="../js/datatables.min.js"></script>
+        <script type="text/javascript" src="../js/fnSetFilteringEnterPress.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    -->
+
+</head>
+
+<body>
+
+
+<div class="left">
+    <div class="item" style="font-size: 24px;font-style: normal;font-family: sans-serif">
+        <span class="glyphicon glyphicon-menu-hamburger"></span> DMTT Portal
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="item active">
+        <span class="glyphicon glyphicon-home"></span> Home
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-file"></span> Form
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-list-alt"></span> Task
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-user"></span> User Management
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-wrench"></span> Configuration
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-log-out"></span> Logout
+    </div>
+</div>
+
+
+<div>
+    <nav class="navbar" style="background-color: #F0F0F0; color: white; width: 100%">
+        <div class="navbar-header" style="">
+            <a class="navbar-brand" href="#"><img src="../static/img/tng.jpg" style="width: 70px;height: 50px;"></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <div style="float: none">
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+
+<!-------------
+Edit content
+------------>
+<div class="container" style="padding-top: 20px;">
+    <h2>Task Request</h2>
+
+    <form th:action="@{/updateTask/__${taskReqId}__/__${jira}__/__${requestDesc}__/__${requestDate}__/__${requestor}__/__${department}__/__${status}__/__${completeDate}__/__${pic}__}"
+          method="post">
+
+        <!---->
+        <!--JIRA NO-->
+        <!---->
+        <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+            <label for="jira">JIRA/HD No:</label>
+            <input type="text" class="form-control" id="jira" name="jira" th:value="*{jira}" readonly>
+        </div>
+        <!---->
+        <!--REQUEST DESCRIPTION-->
+        <!---->
+        <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+            <label for="reqDesc">Request Desc:</label>
+            <textarea class="form-control" rows="2" id="resqDesc" th:text="*{requestDesc}" name="requestdesc"
+                      readonly></textarea>
+        </div>
+        <!---->
+        <!--DATE REQUEST-->
+        <!---->
+        <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+            <label for="dateReq">Date Request:</label>
+            <div class="input-group date col-sm-3" data-date-format="mm-dd-yyyy">
+                <input class="form-control" id="dateReq" name="requestdate" placeholder="MM/DD/YYYY" type="date"
+                       th:value="*{requestDate}" readonly/>
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </span>
+            </div>
+        </div>
+        <!---->
+        <!--REQUESTOR-->
+        <!---->
+        <div class="form-group" style="text-align: left ;padding-left: 15px;padding-right: 15px;">
+            <label for="requestor">Requestor:</label>
+            <input type="text" class="form-control" id="requestor" name="requestor" th:value="*{requestor}" readonly>
+        </div>
+        <!---->
+        <!--DEPARTMENT-->
+        <!---->
+        <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+            <label for="dept">Div/Dept/Unit:</label>
+            <input type="text" class="form-control" placeholder="Ex: Vector" id="dept" name="department"
+                   th:value="*{department}" readonly>
+        </div>
+        <!---->
+        <!--STATUS-->
+        <!---->
+        <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+            <label for="Status">Status:</label>
+            <input type="text" class="form-control" placeholder="Ex: done, pending, in progress" id="status"
+                   name="status" th:value="*{status}" readonly>
+        </div>
+        <!---->
+        <!--COMPLETE DATE-->
+        <!---->
+        <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+            <label for="dateReq">Complete Date:</label>
+            <div class="input-group date col-sm-3" data-date-format="mm-dd-yyyy">
+                <input class="form-control" id="dateComplete" name="completedate" placeholder="MM/DD/YYYY" type="date"
+                       th:value="*{completeDate}" readonly/>
+                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
+        </div>
+        <!---->
+        <!--Person in charge-->
+        <!---->
+        <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+            <label for="Status">Person in charge:</label>
+            <input type="text" class="form-control" placeholder="Ex: Ahmad" id="status" name="pic" th:value="*{pic}"
+                   readonly>
+        </div>
+
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-default" data-dismiss="modal">Done</button>
+        </div>
+
+
+    </form>
+</div>
+
+
+</body>
+
+</html>

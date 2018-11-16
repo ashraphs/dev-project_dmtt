@@ -1,0 +1,29 @@
+
+lsquid:S1192"RDefine a constant instead of duplicating this literal "redirect:/cronJob" 5 times.(è“™€ùÿÿÿÿ
+usquid:S1192"`Define a constant instead of duplicating this literal "Start post request: the id is: " 3 times.(¶ýÛ»
+Isquid:S1066"/Merge this if statement with the enclosing one.(ŽÍÆÄüÿÿÿÿ
+nsquid:S1450"YRemove the "TaskSchJob" field and declare it as a local variable in the relevant methods.(Œù•â
+tsquid:S4144"ZUpdate this method so that its implementation is not identical to "taskPause" on line 128.(½¾¯Õûÿÿÿÿ
+osquid:S4144"ZUpdate this method so that its implementation is not identical to "taskPause" on line 128.(‹çî‰
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(÷á‹ü
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(ë£Ñµ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŽåÕ¹ÿÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(û’šô
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŽåÕ¹ÿÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¶ýÛ»
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¶ýÛ»
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(¶ýÛ»
+^squid:HiddenFieldCheck">Rename "TaskSchJob" which hides the field declared at line 31.(‚¾–Á
+Isquid:S1481"/Remove this unused "jobManager" local variable.(äüüÂúÿÿÿÿ
+Gsquid:S1481"2Remove this unused "executeScript" local variable.(ºúÈÑ
+Vsquid:S1854"ARemove this useless assignment to local variable "executeScript".(ºúÈÑ
+Xsquid:S1854">Remove this useless assignment to local variable "jobManager".(äüüÂúÿÿÿÿ
+ksquid:S00116"URename this field "TaskSchJob" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œù•â
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¾–Á

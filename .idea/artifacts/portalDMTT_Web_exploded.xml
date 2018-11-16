@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="portalDMTT:Web exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/portalDMTT_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="portalDMTT/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="portalDMTT" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

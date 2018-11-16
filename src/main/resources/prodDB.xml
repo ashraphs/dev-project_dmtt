@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="dataSource" class="com.portal.dmtt.model.ProdConfig">
+        <property name="driver" value="com.mysql.jdbc.Driver" />
+        <property name="theConnection" value="jdbc:mysql://localhost:3306/dmtt_portal" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
+    </bean>
+
+
+
+    <!--<bean id="dataSource" class="com.portal.dmtt.model.ProdConfig">-->
+        <!--<property name="driver" value="oracle.jdbc.driver.OracleDriver" />-->
+        <!--<property name="theConnection" value="jdbc:oracle:thin:@10.128.4.4:1521:tngprod1" />-->
+        <!--<property name="username" value="CBOREADUSER1" />-->
+        <!--<property name="password" value="cbo123" />-->
+    <!--</bean>-->
+
+
+
+
+</beans>

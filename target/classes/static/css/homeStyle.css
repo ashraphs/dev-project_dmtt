@@ -1,0 +1,50 @@
+
+body {
+    background-color: #E3E7E9;
+}
+
+div {
+    background-color: #F7F7F7;
+}
+
+ul {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #347AB6;
+}
+
+.divCount {
+    position: absolute;
+    right: auto;
+    top: 100px;
+    left: 70px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    padding-right: 50px;
+    font-style: normal;
+    align-content: center;
+}

@@ -1,0 +1,289 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exception Monitoring</title>
+</head>
+
+
+<!-- BootStrap-->
+
+<link th:href="@{//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css}" rel="stylesheet"
+      id="bootstrap-css"></link>
+<link th:href="@{//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css}" rel="stylesheet}"></link>
+<link th:href="@{../css/menu-sidebar.css}" rel="stylesheet"></link>
+<link th:href="@{../css/menu-topbar.css}" rel="stylesheet"></link>
+<link th:href="@{../css/tableStyle.css}" rel="stylesheet"></link>
+<link th:href="@{../css/excpMonitoring.css}" rel="stylesheet">
+<link rel="stylesheet"
+      th:href="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css}"/>
+<link th:href="@{../css/datatables.min.css}" rel="stylesheet" media="screen"/>
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}">
+
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{https://code.jquery.com/jquery-1.11.3.min.js}"></script>
+<script type="text/javascript" th:src="@{https://code.jquery.com/jquery-1.11.3.min.js}"></script>
+<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{https://code.jquery.com/jquery-1.11.3.min.js}"></script>
+
+
+<!--MY BOOTSTRAP-->
+<!--
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link>
+<link href="../static/css/menu-sidebar.css" rel="stylesheet"></link>
+<link href="../static/css/menu-topbar.css" rel="stylesheet"></link>
+<link href="../static/css/tableStyle.css" rel="stylesheet"></link>
+<link href="../static/css/excpMonitoring.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+<link href="../css/datatables.min.css" rel="stylesheet" media="screen" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+-->
+
+
+<body>
+
+<div class="left">
+    <div class="item" style="font-size: 24px;font-style: normal;font-family: sans-serif">
+        <span class="glyphicon glyphicon-menu-hamburger"></span> DMTT Portal
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="item active">
+        <span class="glyphicon glyphicon-home"></span> Home
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-file"></span> Form
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-list-alt"></span> Exception Monitoring
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-user"></span> User Management
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-wrench"></span> Configuration
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-log-out"></span> Logout
+    </div>
+</div>
+
+
+<div>
+    <nav class="navbar" style="background-color: #F0F0F0; color: white; width: 100%">
+        <div class="navbar-header" style="">
+            <a class="navbar-brand" href="#">
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <div style="float: none">
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+
+
+<!--insert new SPID and Loc ID-->
+<div class="newID">
+    <h4 style="text-align: center">FN and FR Exception Monitor</h4>
+
+    <form th:action="@{/addNewLocation}" th:object="${addNewLocation}" th:method="post">
+
+        <div class="form-group col-xs-4" style="left: 0px; top: 30px;">
+            <label for="dateReq" style="float:left">SP ID:</label>
+            <input type="text" class="form-control" name="spid" th:field="*{match_SP_Id}">
+        </div>
+
+        <div class="form-group col-xs-4" style="left: -200px; top: 90px;">
+            <label for="dateReq" style="float:left;">Loc ID:</label>
+            <input type="text" class="form-control" id="locid" th:field="*{match_Loc_Id}">
+        </div>
+
+        <div class="form-group col-xs-9" style="left: 0px; top: 90px;">
+            <label for="dateReq" style="float:left;">Remarks:</label>
+            <textarea type="textarea" class="form-control" id="remarks" th:field="*{remarks}"></textarea>
+        </div>
+
+        <div class="container" style=" position: absolute; bottom:10px; right: -530px">
+            <button type="submit" class="btn btn-success btn-primary" id="btnAddtaskReqForm" style="width: 80px">
+                Add
+            </button>
+        </div>
+    </form>
+
+</div>
+
+<!--    table of list new sp_id, loc id and remarks-->
+
+<div class="tableNewID">
+    <h4 style="text-align: center">FN and FR Exception Table</h4>
+
+    <table class="table" style="width:1090px">
+        <thead>
+        <tr>
+            <th style="text-align: center">#</th>
+            <th style="text-align: center">SP ID</th>
+            <th style="text-align: center">Loc ID</th>
+            <th style="text-align: center">Remarks</th>
+            <th style="text-align: center">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="newLocation : ${theFnFrNewLocationList}">
+            <td th:text="${newLocation.id}" style="text-align: center;width: 1px">0</td>
+            <td th:text="${newLocation.match_SP_Id}" style="text-align: center;width: 16.6%">56</td>
+            <td th:text="${newLocation.match_Loc_Id}" style="text-align: center;width: 16.6%">Y37</td>
+            <td th:text="${newLocation.remarks}" style="text-align: center">Kak Norli to register</td>
+            <td>
+                <form th:action="@{/addNewLocation/__${newLocation.id}__}">
+                    <button type="submit" class="btn btn-danger btn-sm" th:name="actionDelete" th:value="delete">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </form>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!--    upload new FN or FR-->
+
+<div class="Result">
+    <table class="table" style="width:1710px">
+        <thead>
+        <caption style="font-size: 15px; text-align: left"></caption>
+        <tr>
+            <th style="text-align: center; width: 17.60%">File Name</th>
+            <th style="text-align: center; width: 20%">Remarks</th>
+            <th style="text-align: center; width: 6%">Date</th>
+            <th style="text-align: center; width: 15%">Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="newFileUpload : ${theExcpFileList}">
+            <td th:text="${newFileUpload.fileName}" style="text-align: center"></td>
+            <td th:text="${newFileUpload.remarks}" style="text-align: center"></td>
+            <td th:text="${newFileUpload.timeStamp}" style="text-align: center"></td>
+            <td style="text-align: center">
+                <form th:action="@{/runMatching/__${newFileUpload.id}__}">
+                    <!--RUN BUTTON-->
+                    <button type="submit" class="btn btn-success btn-sm" th:name="actionRun" th:value="run">
+                        <span class="glyphicon glyphicon-play"></span>
+                    </button>
+                    <!--DELETE BUTTON-->
+                    <button type="submit" class="btn btn-danger btn-sm" th:name="actionDelete" th:value="delete">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                    <!--DOWNLOAD BUTTON-->
+                    <button type="submit" class="btn btn-primary btn-sm" th:name="actionDownload" th:value="delete">
+                        <span class="glyphicon glyphicon-download-alt"></span>
+                    </button>
+                </form>
+            </td>
+
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="modalUploadFile">
+
+    <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#new-project-modal"
+            style="left: 100px;">
+        <span class="glyphicon glyphicon-plus"></span>
+    </button>
+
+    <!--NEW-MODAL FORM-->
+    <div class="modal fade" id="new-project-modal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Exception Monitoring FN & FR</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="span2">
+                        <!---->
+                        <!--INSERT DATA-->
+                        <!---->
+                        <form th:action="@{/addNewUploadFile}" th:method="POST" th:object="${addNewUploadFile}"
+                              class="form-horizontal" id="addProject" enctype="multipart/form-data">
+                            <!---->
+                            <!--Title-->
+                            <!---->
+                            <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                <label for="title">File Name:</label>
+                                <input type="text" class="form-control input-sm" id="title" placeholder="" name="title"
+                                       th:field="*{fileName}">
+                            </div>
+                            <!---->
+                            <!--Title-->
+                            <!---->
+                            <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                <label for="title">Remarks:</label>
+                                <input type="text" class="form-control input-sm" id="title" placeholder="" name="title"
+                                       th:field="*{remarks}">
+                            </div>
+                            <!---->
+                            <!--file upload-->
+                            <div class="form-group col-xs-8"
+                                 style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                <label for="title">File Path:</label>
+                                <input type="file" name="theFile" class="form-control input-sm" id="title">
+                            </div>
+
+                            <div class="form-group">
+                                <div class="modal-footer" style="top: 100px;">
+                                    <button type="submit" class="btn btn-default" id="btnAddtaskReqForm">Add</button>
+
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="btnClearDB">
+    <form th:action="@{/deleteDb}" th:method="POST">
+        <!--DELETE BUTTON-->
+        <button type="submit" class="btn btn-warning btn-xs" style="left: 100px;">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+    </form>
+</div>
+
+</body>
+
+</html>

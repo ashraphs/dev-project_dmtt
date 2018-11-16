@@ -1,0 +1,25 @@
+
+]squid:S2259"HA "NullPointerException" could be thrown; "connection" is nullable here.(ôêÂœ
+ksquid:S00116"URename this field "Connection" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Äîæ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ÛŒ
+\squid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(‰öıÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(üÅÔÁÿÿÿÿÿ
+L
+squid:S106"9Replace this use of System.out or System.err by a logger.(›‹²m
+ksquid:S00116"URename this field "TaskSchJob" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œù•â
+@squid:S1068"&Remove this unused "id" private field.(ôç¼Óşÿÿÿÿ
+Gsquid:S1068"-Remove this unused "theScript" private field.(ñ®ãûÿÿÿÿ
+asquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(õ½ÛØşÿÿÿÿ
+Csquid:S1068".Remove this unused "Connection" private field.(‡Äîæ
+psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾”íÅ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(—œõøÿÿÿÿ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‹Ö¾Î
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(åÕ¹ÿÿÿÿÿ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Ş€ã
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ì´Üúÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(åÕ¹ÿÿÿÿÿ

@@ -1,0 +1,21 @@
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
+
+
+
+/* Important part */
+.modal-dialog{
+    height: 700px;
+}
+.modal-body{
+    height: 250px;
+    overflow-y: auto;
+}
+
+.navbar-brand
+{
+     margin-left:50px !important;
+}

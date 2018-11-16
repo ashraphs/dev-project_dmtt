@@ -1,0 +1,238 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<html>-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+
+    <!-- MY BOOTSTRAP-->
+    <link th:href="@{//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}">
+    <link th:href="@{../css/menu-sidebar.css}" rel="stylesheet">
+    <link th:href="@{../css/menu-topbar.css}" rel="stylesheet">
+    <link th:href="@{../css/Home.css}" rel="stylesheet">
+    <link th:href="@{../css/tableStyle.css}" rel="stylesheet">
+    <link th:href="@{../css/overwrite_style.css}">
+    <link th:href="@{../css/taskStyle.css}" rel="stylesheet">
+
+    <!--Script-->
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+    <script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    <script th:src="@{../static/js/taskjobBtn.js}"></script>
+
+    <!--&lt;!&ndash;-->
+
+    <!--MY SCRIPT AND BOOTSTRAP-->
+
+    <!--MY BOOTSTRAP-->
+
+    <!--
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../static/css/menu-sidebar.css" rel="stylesheet">
+        <link href="../static/css/menu-topbar.css" rel="stylesheet">
+        <link href="../static/css/Home.css" rel="stylesheet">
+        <link href="../static/css/tableStyle.css" rel="stylesheet">
+        <link href="../static/css/overwrite_style.css">
+        <link href="../static/css/taskStyle.css" rel="stylesheet">
+
+        &lt;!&ndash;Script&ndash;&gt;
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../static/js/taskjobBtn.js"></script>
+    -->
+
+</head>
+
+<body>
+
+
+<!---->
+<!--   MENU-->
+<!--   -->
+<div class="left">
+    <div class="item" style="font-size: 24px;font-style: normal;font-family: sans-serif">
+        <span class="glyphicon glyphicon-menu-hamburger"></span> DMTT Portal
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="item active">
+        <span class="glyphicon glyphicon-home"></span> Home
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-file"></span> Form
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-list-alt"></span> Task
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-user"></span> User Management
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-wrench"></span> Configuration
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-log-out"></span> Logout
+    </div>
+</div>
+
+
+<div>
+    <nav class="navbar" style="background-color: #F0F0F0; color: white; width: 100%">
+        <div class="navbar-header" style="">
+            <a class="navbar-brand" href="#"><img src="../static/img/tng.jpg" style="width: 70px;height: 50px;"></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <div style="float: none">
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+<!---->
+<!--INSERT NEW SCRIPT AND SCHEDULER-->
+<!---->
+
+<div class="ScriptForm">
+    <h2>Script Run</h2>
+    <form action="#" th:action="@{/addtaskScheduler}" th:object="${TaskSchJob}" th:method="post" class="form-horizontal"
+          id="addTaskScheduler">
+
+        <div class="form-group inputStyle">
+            <!-- title -->
+            <label for="title" style="margin-left: 20px;">Title:</label>
+            <input type="text" class="form-control" id="inputTitle" th:field="*{title}"
+                   style="margin-left: 20px;width: 850px;">
+        </div>
+        <!-- Script -->
+        <div class="form-group">
+            <label for="pwd" style="margin-left: 20px;">Script:</label>
+            <textarea class="form-control" rows="5" id="inputScript" th:field="*{script}"
+                      style="margin-left: 20px;width: 850px;"></textarea></div>
+        <!-- Cron Job -->
+        <div class="container">
+            <label for="title">When to execute:&nbsp;&nbsp;&nbsp;</label>
+            <!-- cron job -every -->
+            <input type="radio" name="cronJob" value="everydayCron">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Run for every
+                <span class="caret"></span>
+            </button>
+            <div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Everyday (10 Am)</a></li>
+                    <li><a href="#">Everyday (4 Pm)</a></li>
+                    <li><a href="#">Everyday (6 Pm)</a></li>
+                    <li><a href="#">Everyweek (Monday 11 Am)</a></li>
+                    <li><a href="#">Every Month (End of Month, 10 Am)</a></li>
+                </ul>
+
+                <br>
+                <!-- cron job-field text -->
+                <input type="radio" name="cronJob" value="manualCron"
+                       style="left: 155px;top: 367px;position: absolute;">
+                <input type="text" class="form-control" id="manualCron"
+                       style="position: absolute;width: 400px;left: 173px;top: 364px"
+                       placeholder="example :0 0 * * * *">
+            </div>
+
+
+        </div>
+
+
+        <div class="buttonScriptRun">
+            <button type="submit" class="btn btn-default" style="width: 100px;">Add</button>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+<!---->
+<!--TABLE STATUS-->
+<!---->
+<div class="tableRun" style="height: 500px; overflow-y: auto">
+    <!-- TABLE -->
+    <table class="table display table-striped" id="example">
+
+        <p style="text-align: center;text-decoration-line: none;font-size: 24px;">Script Cron Job</p>
+
+        <thead>
+        <tr>
+            <th scope="col" style="text-align: center">#</th>
+            <th scope="col" style="text-align: center">Title</th>
+            <th scope="col" style="text-align: center">Username</th>
+            <th scope="col" style="text-align: center">Script</th>
+            <th scope="col" style="text-align: center">Date Create</th>
+            <th scope="col" style="text-align: center">Cron Job</th>
+            <th scope="col" style="text-align: center">Status</th>
+            <th scope="col" style="text-align: center">Action</th>
+
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="taskJob : ${theTaskSchJobList}" style="text-align: center">
+
+            <td th:text="${taskJob.id}">Id</td>
+            <td th:text="${taskJob.title}">title</td>
+            <td th:text="${taskJob.username}">username</td>
+            <td th:text="${taskJob.script}">script</td>
+            <td th:text="${taskJob.date_create}">date_Create</td>
+            <td th:text="${taskJob.cron_job}">CronJob</td>
+            <td th:text="${taskJob.status}">Status</td>
+            <td>
+
+
+                <!--RUN BUTTON-->
+                <form th:action="@{/taskRun/__${taskJob.id}__}">
+                    <button type="submit" class="btn btn-success" th:name="actionRun" th:value="run">
+                        <span class="glyphicon glyphicon-play"></span>
+                    </button>
+
+                    <!--PAUSE BUTTON-->
+                    <button type="submit" class="btn btn-primary" th:name="actionPause" th:value="pause">
+                        <span class="glyphicon glyphicon-pause"></span>
+                    </button>
+
+                    <!--EDIT BUTTON-->
+                    <button type="submit" class="btn btn-warning" th:name="actionEdit" th:value="edit">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+
+                    <!--DELETE BUTTON-->
+                    <button type="submit" class="btn btn-danger" th:name="actionDelete" th:value="delete">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </form>
+
+
+            </td>
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!---->
+<!--    status run-->
+<!---->
+<div class="statusRun">
+
+
+</div>
+
+
+</body>
+
+</html>

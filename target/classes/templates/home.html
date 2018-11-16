@@ -1,0 +1,542 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+
+<!-- BootStrap-->
+  <link th:href="@{//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css}" rel="stylesheet"
+      id="bootstrap-css"></link>
+<link th:href="@{//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css}" rel="stylesheet"></link>
+<link rel="stylesheet"
+      th:href="@{https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min}">
+<link rel="stylesheet"
+      th:href="@{https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css}">
+<link th:href="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css}" rel="stylesheet"
+      type="text/css"/>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<link th:href="@{../css/menu-sidebar.css}" rel="stylesheet"></link>
+<link th:href="@{../css/menu-topbar.css}" rel="stylesheet"></link>
+<link th:href="@{../css/Home.css}" rel="stylesheet"></link>
+<link th:href="@{../css/tableStyle.css}" rel="stylesheet"></link>
+<link th:href="@{../static/css/overwrite_style.css}">
+<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet" media="screen"/>
+<link th:href="@{../css/starter-template.css}" rel="stylesheet" media="screen"/>
+<link th:href="@{../css/datatables.min.css}" rel="stylesheet" media="screen"/>
+
+
+<script th:src="@{//code.jquery.com/jquery-1.11.1.min.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js}"></script>
+<script type="text/javascript" th:src="@{../js/homeTableData.js}"></script>
+<script type="text/javascript" th:src="@{../js/datatables.min.js}"></script>
+<script type="text/javascript" th:src="@{../js/fnSetFilteringEnterPress.js}"></script>
+<script type="text/javascript" th:src="@{../js/homeTable.js}"></script>
+<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js}"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" th:src="@{js/admin.js}"></script>
+<script type="text/javascript" th:src="@{../js/datatables.min.js}"></script>
+<script type="text/javascript" th:src="@{../js/fnSetFilteringEnterPress.js}"></script>
+<script type="text/javascript" th:src="@{../js/chg-buttonText.js}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+<!--MY BOOTSTRAP-->
+
+
+<!--
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css"
+/>
+<link href="../static/css/menu-sidebar.css" rel="stylesheet"></link>
+<link href="../static/css/menu-topbar.css" rel="stylesheet"></link>
+<link href="../static/css/Home.css" rel="stylesheet"></link>
+<link href="../static/css/tableStyle.css" rel="stylesheet"></link>
+<link href="../static/css/overwrite_style.css"></link>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+/>
+<link href="../css/starter-template.css" rel="stylesheet" media="screen" />
+<link href="../css/datatables.min.css" rel="stylesheet" media="screen" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+<script type="text/javascript" src="../js/homeTableData.js"></script>
+<script type="text/javascript" src="@{../js/datatables.min.js}"></script>
+<script type="text/javascript" src="../js/fnSetFilteringEnterPress.js"></script>
+<script type="text/javascript" src="../js/homeTable.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/admin.js"></script>
+<script type="text/javascript" src="../js/datatables.min.js"></script>
+<script type="text/javascript" src="../js/fnSetFilteringEnterPress.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+-->
+
+<body>
+
+    <div class="left">
+        <div class="item" style="font-size: 24px;font-style: normal;font-family: sans-serif">
+            <span class="glyphicon glyphicon-menu-hamburger"></span> DMTT Portal
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="item active">
+            <span class="glyphicon glyphicon-home"></span> Home
+        </div>
+        <div class="item">
+            <span class="glyphicon glyphicon-file"></span> Form
+        </div>
+        <div class="item">
+            <span class="glyphicon glyphicon-list-alt"></span> Exception Monitoring
+        </div>
+        <div class="item">
+            <span class="glyphicon glyphicon-user"></span> User Management
+        </div>
+        <div class="item">
+            <span class="glyphicon glyphicon-wrench"></span> Configuration
+        </div>
+        <div class="item">
+            <span class="glyphicon glyphicon-log-out"></span> Logout
+        </div>
+    </div>
+
+
+    <div>
+        <nav class="navbar" style="background-color: #F0F0F0; color: white; width: 100%">
+            <div class="navbar-header" style="">
+                <a class="navbar-brand" href="#">
+                    <img src="../static/img/tng.jpg" style="width: 70px;height: 50px;">
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div style="float: none">
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <!--
+--------------------------------
+STATUS PROJECT
+--------------------------------
+-->
+    <div class="col-sm-4 statusProject">
+        <p style="text-align: center;text-decoration-line: none;font-size: 24px;">Status Project</p>
+
+        <!--ONBOARDING SCREENING-->
+        <div class="DailySummaryTable">
+            <table class="table table-hover">
+
+
+                <thead>
+                    <caption style="font-size: 15px; text-align: left">
+                        <b></b>
+                    </caption>
+
+                    <tr style="font-size: 13px; text-align: center">
+                        <th scope="col" style="text-align: center">Project</th>
+                        <th scope="col" style="text-align: center">ITO Task</th>
+                        <th scope="col" style="text-align: center">Status</th>
+                        <th scope="col" style="text-align: center">Action</th>
+                        <th scope="col" style="text-align: center"></th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="statusProjectList : ${theStatusProjectList}" style="text-align: center;font-size: 15px">
+
+                        <td th:text="${statusProjectList.projectname}"></td>
+                        <td th:text="${statusProjectList.itotask}"></td>
+                        <td th:text="${statusProjectList.status}"></td>
+
+                        <td>
+                            <form th:action="@{/statusProject/__${statusProjectList.id}__}">
+
+                                <!--EDIT BUTTON-->
+                                <button type="submit" class="btn btn-warning btn-xs" th:name="actionEdit" th:value="edit" data-toggle="modal" data-target="#edit-modal-statusProject">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+
+                                <!--DELETE BUTTON-->
+                                <button type="submit" class="btn btn-danger btn-xs" th:name="actionDelete" th:value="delete">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </form>
+
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <!---->
+    <!-- NEW BUTTON - add project -->
+    <!---->
+    <div class="statusProject-new">
+        <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#new-project-modal">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+
+        <!--NEW-MODAL FORM-->
+        <div class="modal fade" id="new-project-modal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Status Project Tracking</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="span2">
+                            <!---->
+                            <!--INSERT DATA-->
+                            <!---->
+                            <form action="#" th:action="@{/addProject}" th:object="${addProject}" method="post" class="form-horizontal" id="addProject">
+                                <!---->
+                                <!--Title-->
+                                <!---->
+                                <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                    <label for="title">Title:</label>
+                                    <input type="text" class="form-control" id="title" placeholder="" name="title" th:field="*{projectname}">
+                                </div>
+                                <!---->
+                                <!--ITO Task-->
+                                <!---->
+                                <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                    <label for="task">ITO Task:</label>
+                                    <textarea class="form-control" rows="2" id="itoTask" th:field="*{itotask}"></textarea>
+                                </div>
+
+                                <div class="form-group col-xs-2" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                    <label for="title">Status:</label>
+                                    <input type="text" class="form-control" id="title" placeholder="" name="title" th:field="*{status}">
+                                </div>
+
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-default" id="btnAddtaskReqForm">Add</button>
+
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--
+--------------------------------
+TABLE Task Request Form Tracking
+--------------------------------
+-->
+    <div class="tableTaskRequest">
+
+        <!-- BUTTON -->
+        <div class="buttonTable">
+
+            <!-- NEW BUTTON -->
+            <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal-new-taskReq">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+
+            <!-- Modal NEW FORM BUTTON -->
+            <div class="modal fade" id="myModal-new-taskReq" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Task Request Form Tracking</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="span2">
+                                <!---->
+                                <!--INSERT DATA-->
+                                <!---->
+                                <form action="#" th:action="@{/addTaskReq}" th:object="${addTaskReq}" method="post" class="form-horizontal" id="addTaskRequestForm">
+                                    <!---->
+                                    <!--JIRA NO-->
+                                    <!---->
+                                    <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                        <label for="jira">JIRA/HD No:</label>
+                                        <input type="text" class="form-control" id="jira" placeholder="ex: HD-467-v4" name="jira" th:field="*{jira}">
+                                    </div>
+                                    <!---->
+                                    <!--REQUEST DESCRIPTION-->
+                                    <!---->
+                                    <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                        <label for="reqDesc">Request Desc:</label>
+                                        <textarea class="form-control" rows="2" id="resqDesc" th:field="*{requestdesc}"></textarea>
+                                    </div>
+                                    <!---->
+                                    <!--DATE REQUEST-->
+                                    <!---->
+                                    <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                        <label for="dateReq">Date Request:</label>
+                                        <div class="input-group date col-sm-3" data-date-format="mm-dd-yyyy">
+                                            <input class="form-control" id="date" name="dateReq" placeholder="MM/DD/YYYY" type="date" th:field="*{requestdate}" />
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                    <!--REQUESTOR-->
+                                    <!---->
+                                    <div class="form-group" style="text-align: left ;padding-left: 15px;padding-right: 15px;">
+                                        <label for="requestor">Requestor:</label>
+                                        <input type="text" class="form-control" id="requestor" name="requestor" th:field="*{requestor}">
+                                    </div>
+                                    <!---->
+                                    <!--DEPARTMENT-->
+                                    <!---->
+                                    <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                        <label for="dept">Div/Dept/Unit:</label>
+                                        <input type="text" class="form-control" placeholder="Ex: Vector" id="dept" name="dept" th:field="*{department}">
+                                    </div>
+                                    <!---->
+                                    <!--STATUS-->
+                                    <!---->
+                                    <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                        <label for="Status">Status:</label>
+                                        <input type="text" class="form-control" placeholder="Ex: done, pending, in progress" id="status" name="status" th:field="*{status}">
+                                    </div>
+                                    <!---->
+                                    <!--COMPLETE DATE-->
+                                    <!---->
+                                    <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                        <label for="dateReq">Complete Date:</label>
+                                        <div class="input-group date col-sm-3" data-date-format="mm-dd-yyyy">
+                                            <input class="form-control" id="date" name="dateReq" placeholder="MM/DD/YYYY" type="date" th:field="*{completedate}" />
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!---->
+                                    <!--Person in charge-->
+                                    <!---->
+                                    <div class="form-group" style="text-align: left;padding-left: 15px;padding-right: 15px;">
+                                        <label for="Status">Person in charge:</label>
+                                        <input type="text" class="form-control" placeholder="Ex: Ahmad" id="status" name="status" th:field="*{pic}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-default" id="btnAddtaskReqForm">Add</button>
+
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!---->
+        <!-- SHOW TABLE -->
+        <!--TASK REQUEST FORM TABLE-->
+        <!---->
+        <table id="paginatedTable" class="table table-striped">
+
+            <p style="text-align: center;text-decoration-line: none;font-size: 24px;">Task Request Form Tracking</p>
+
+            <thead>
+            <!--/*@thymesVar id="theTaskRequestList" type="com.portal.dmtt.controller.HomeController"*/-->
+                <tr>
+                    <!--<th scope="col" style="text-align: center">#</th>-->
+                    <th scope="col" style="text-align: center">JIRA/HD No</th>
+                    <th scope="col" style="text-align: center">Requestor</th>
+                    <th scope="col" style="text-align: center">Department</th>
+                    <th scope="col" style="text-align: center">Request Description</th>
+                    <th scope="col" style="text-align: center">Person In Charge</th>
+                    <th scope="col" style="text-align: center">Request Date</th>
+                    <th scope="col" style="text-align: center">Completion Date</th>
+                    <th scope="col" style="text-align: center">Status</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="taskReqList : ${theTaskRequestList}" style="text-align: center">
+
+                    <!--<td th:text="${taskReqList.id}">Id</td>-->
+                    <td th:text="${taskReqList.jira}"></td>
+                    <td th:text="${taskReqList.requestor}"></td>
+                    <td th:text="${taskReqList.department}"></td>
+                    <td th:text="${taskReqList.requestdesc}" style="max-width: 30px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"></td>
+                    <td th:text="${taskReqList.pic}"></td>
+                    <td th:text="${taskReqList.requestdate}"></td>
+                    <td th:text="${taskReqList.completedate}"></td>
+                    <td th:text="${taskReqList.status}"></td>
+                    <td>
+                        <form th:action="@{/taskReq/__${taskReqList.id}__}">
+                            <!--EDIT BUTTON-->
+                            <button type="submit" class="btn btn-warning btn-sm" th:name="actionEdit" th:value="edit">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+
+                            <!--DELETE BUTTON-->
+                            <button type="submit" class="btn btn-danger btn-sm" th:name="actionDelete" th:value="delete">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+
+                            <!--VIEW BUTTON-->
+                            <button type="submit" class="btn btn-info btn-sm" th:name="actionView" th:value="view">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                            </button>
+                        </form>
+                    </td>
+            </tbody>
+        </table>
+    </div>
+
+    <!--
+--------------------------------
+total Task
+--------------------------------
+-->
+    <div class="ideaGraph well">
+
+        <h4 style="text-align: center">Task Request</h4>
+
+
+
+    </div>
+
+    <!--
+--------------------------------
+Table- new monthly task and daily task
+--------------------------------
+-->
+    <div class="taskTable well">
+
+        <table class="table" style="width: 680px">
+            <h4 style="text-align: center">AdHoc Request</h4>
+
+            <thead>
+                <tr>
+                    <th style="text-align: center">Item</th>
+                    <th style="text-align: center">Requestor</th>
+                    <th style="text-align: center">Frequency</th>
+                    <th style="text-align: center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th style="text-align: center" th:text="${countTaskRequest}">0</th>
+                    <th style="text-align: center" th:text="${countStatusProject}">0</th>
+                    <th style="text-align: center">0</th>
+                    <th style="text-align: center">0</th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--    -->
+    <!--    DATE REQUEST-->
+    <!--    -->
+    <script th:inline="javascript">
+        $(document).ready(function () {
+            var date_input = $('input[name="dateReq"]'); //our date input has the name "date"
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            date_input.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+        })
+    </script>
+    <!--    -->
+    <!--    DATE COMPLETE-->
+    <!--    -->
+    <script th:inline="javascript">
+        $(document).ready(function () {
+            var date_input = $('input[name="dateComplete"]'); //our date input has the name "date"
+            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+            date_input.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+        })
+    </script>
+
+    <!--
+----------------
+FOOTER
+----------------
+-->
+
+    <footer>
+        <p>© 2018
+            <a style="color:#0a93a6; text-decoration:none;" href="#"> Created By Amir.Asyraf@touchngo.com.my</a>, Data Management Portal System v1.0</p>
+    </footer>
+
+
+</body>
+
+
+</html>
